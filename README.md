@@ -18,8 +18,6 @@ Usage:
 In `completing-read-multiple`, the result list of chosen strings is made by
 splitting the input string with `crm-separator` regular expression variable.
 
-This approach is not suitable for 
-
 This approach is not suitable in several situations:
 
 1. Candidates might contain the default `,` separator. In this case, the
