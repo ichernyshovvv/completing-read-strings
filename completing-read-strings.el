@@ -99,7 +99,7 @@ with empty strings removed."
          (setq collection (remove chosen collection)))))
     (or list-of-chosen def)))
 
-(put 'minibuffer-complete-and-exit :advertised-binding [?])
+(put 'minibuffer-complete-and-exit :advertised-binding [?\C-m])
 
 (provide 'completing-read-strings)
 
