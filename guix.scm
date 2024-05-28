@@ -1,0 +1,31 @@
+(use-modules
+ (guix packages)
+ (guix profiles)
+ ((guix licenses) #:prefix license:)
+ (guix download)
+ (guix git-download)
+ (guix build-system gnu)
+ (gnu packages guile)
+ (guix build-system copy)
+ (guix build-system guile)
+ (gnu packages)
+ (gnu packages autotools)
+ (gnu packages base)
+ (gnu packages version-control)
+ (gnu packages pkg-config)
+ (gnu packages emacs)
+ (guix gexp)
+ (guix build-system emacs))
+
+(define-public emacs-crs
+  (package
+    (name "emacs-crs")
+    (version "git")
+    (source (local-file "crs.el"))
+    (build-system emacs-build-system)
+    (home-page "https://emacs.org")
+    (synopsis "AZAZ")
+    (description "AZAZZZZZZ")
+    (license license:gpl3+)))
+
+(packages->manifest (list coreutils emacs-crs emacs-next))
