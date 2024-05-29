@@ -29,7 +29,7 @@ This approach is not suitable in several situations:
 ;; => ("sec" "ond")
 ```
 
-A developer have to locally rebind `crm-separator` and tell the user which
+A developer has to locally rebind `crm-separator` and tell the user which
 character to type to separate the candidates.
 
 ``` elisp
@@ -38,8 +38,8 @@ character to type to separate the candidates.
                             '("first" "sec,ond" "third")))
 ```
 
-2. Candidates might contain any character, so it's hard to pick easily typed
-   separator. Example: Org headings, file names. In this case a developer might
+2. Candidates might contain any characters, so it's hard to pick an easily typed
+   separator. Example: Org headings, file names. In this case, a developer might
    use `\n` as a separator, which a user can enter by pressing `C-o` and moving
    the cursor 1 char forward to be able to display the list of candidates (which
    is not convenient).
@@ -50,7 +50,7 @@ character to type to separate the candidates.
    "Prompt: " '("first." "sec,ond" "third;")))
 ```
 
-`completing-read-strings` solves the issue by providing a function that have the
-same interface for all kind of candidates. Internally, collects the chosen
+`completing-read-strings` solves the issue by providing a function that has the
+same interface for all kinds of candidates. Internally, it collects the chosen
 candidates into a list during reading and then returns it (without the need to
 split the input string with regular expression).
